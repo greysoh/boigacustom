@@ -161,3 +161,4 @@ cython_debug/
 
 # Our junk
 pluginmeta.json
+modulegen.py
