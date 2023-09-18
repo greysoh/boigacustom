@@ -39,7 +39,7 @@ for (const block of input.blocks) {
 ${block.text}
 """
 def ${camelToUnderscore(block.opcode)}(${Object.keys(block.arguments).join(", ")}):
-  return __structure__.expression("${block.opcode}", ${Object.keys(block.arguments).join(", ")})\n\n`
+  return __structure__.expression("${block.opcode}", ${Object.keys(block.arguments).map((i) => `${i}=${i}`).join(", ")})\n\n`
 }
 
 if (typeof Deno != "undefined") {
